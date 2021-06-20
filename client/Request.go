@@ -1,4 +1,4 @@
-package api_client
+package client
 
 import (
 	"encoding/json"
@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	CONTENT_TYPE_NAME = "contentType" //todo changeble name
+	CONTENT_TYPE_NAME = "contentType"
 	APP_JSON_NAME     = "application/json"
 )
 

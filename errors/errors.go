@@ -13,16 +13,8 @@ func New(definition ErrorDef, params ...interface{}) Error {
 	return &errorImpl{definition: definition, params: params}
 }
 
-func NewWithCause(definition ErrorDef, innerCause error, params ...interface{}) Error {
-	return &errorImpl{definition: definition, innerCause: innerCause.Error(), params: params}
-}
-
 func Panic(definition ErrorDef, params ...interface{}) Error {
 	panic(&errorImpl{definition: definition, params: params, stackFrame: getStackFrameForPanic()})
-}
-
-func PanicWithCause(definition ErrorDef, innerCause error, params ...interface{}) Error {
-	panic(&errorImpl{definition: definition, innerCause: innerCause.Error(), params: params, stackFrame: getStackFrameForPanic()})
 }
 
 func GetStackFrame(beginningLine, lineCount int) (stackFrame string) {
