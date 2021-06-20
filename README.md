@@ -16,4 +16,6 @@ func (r *Request) WithHeader(header string, value interface{}) *Request {
 	return r
 }
 
+with version 0.0.1
+
 ```
