@@ -16,6 +16,6 @@ func (r *Request) WithHeader(header string, value interface{}) *Request {
 	return r
 }
 
-with version v0.0.1
+with version v0.1
 
 ```
