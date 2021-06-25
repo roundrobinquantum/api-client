@@ -31,6 +31,14 @@ func Get(url string) *Request {
 	}
 }
 
+func Post(url string, body interface{}) *Request {
+	return &Request{
+		method: fasthttp.MethodPost,
+		url:    url,
+		body: body,
+	}
+}
+
 func Delete(url string) *Request {
 	return &Request{
 		method: fasthttp.MethodDelete,
